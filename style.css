@@ -13,7 +13,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 .app{
     width: 400px;
@@ -43,7 +43,7 @@ body{
     gap: 15px;
 }
 #tasks div{
-    background-image: radial-gradient(circle at 11% 32%, rgb(44, 13, 50),rgb(164, 152, 172));
+    background-image: radial-gradient(circle at 11% 32%, rgb(248, 14, 225),rgb(240, 177, 17));
     border-radius: 15px;
     padding: 10px;
     color: black;
