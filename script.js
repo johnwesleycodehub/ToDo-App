@@ -35,15 +35,15 @@ const getData=()=>{
     });
     localStorage.setItem("data",JSON.stringify(data));
     createTask();
-}
+};
 
 const createTask = ()=>{
     tasks.innerHTML="";
     data.map((ele,i)=>{
         return (tasks.innerHTML += `<div id=${i}>
         <span class="fw-bolder">${ele.text}</span>
-        <span class="small text-secondary">${ele.date}</span>
-        <p>${ele.task}</p>
+        <span class="fw-bolder">${ele.date}</span>
+        <p class="fw-bold">${ele.task}</p>
         <span class="options">
         <i onclick="editTask(this)" data-bs-toogle="modal" data-bs-target="#form" class="fa fa-pencil-square" aria-hidden="true"></i>
         <i onclick="deleteTask(this);createTask()" class="fa fa-trash-o" aria-hidden="true"></i>
@@ -59,9 +59,9 @@ const resetForm=()=>{
     textInput.value="";
     dateInput.value="";
     textarea.value="";
-}
+};
 (()=>{
-    data=JSON.parse(localStorage.getItem(("data"))) || [];
+    data=JSON.parse(localStorage.getItem("data")) || [];
     createTask();
 })();
 
@@ -73,6 +73,6 @@ const editTask=(e)=>{
 }
 const deleteTask=(e)=>{
     e.parentElement.parentElement.remove();
-    data.splice(e.parentElement.parentElement.id,1)
+    data.splice(e.parentElement.parentElement.id, 1)
     localStorage.setItem("data",JSON.stringify(data));
-}
+};
