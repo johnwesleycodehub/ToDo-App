@@ -45,8 +45,8 @@ const createTask = ()=>{
         <span class="fw-bolder">${ele.date}</span>
         <p class="fw-bold">${ele.task}</p>
         <span class="options">
-        <i onclick="editTask(this)" data-bs-toogle="modal" data-bs-target="#form" class="fa fa-pencil-square" aria-hidden="true"></i>
-        <i onclick="deleteTask(this);createTask()" class="fa fa-trash-o" aria-hidden="true"></i>
+        <i onclick="editTask(this)" data-bs-toogle="modal" data-bs-target="#form" class="fa fa-pencil-square"></i>
+        <i onclick="deleteTask(this);createTask()" class="fa fa-trash-o"></i>
         </span>
         </div>
         
@@ -70,6 +70,7 @@ const editTask=(e)=>{
     textInput.value= task.children[0].innerHTML;
     dateInput.value = task.children[1].innerHTML;
     textarea.value = task.children[2].innerHTML;
+    deleteTask(e);
 }
 const deleteTask=(e)=>{
     e.parentElement.parentElement.remove();
